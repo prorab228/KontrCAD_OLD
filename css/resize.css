@@ -1,0 +1,581 @@
+/* ========== АДАПТАЦИЯ ДЛЯ МАСШТАБИРОВАНИЯ СИСТЕМЫ И МАЛЕНЬКИХ ЭКРАНОВ ========== */
+
+/* Для системного масштабирования 125% */
+@media screen and (min-resolution: 120dpi) and (max-resolution: 140dpi),
+       screen and (-webkit-min-device-pixel-ratio: 1.25) {
+    :root {
+        --toolbar-height: 50px;
+        --panel-width: 280px;
+        --border-radius: 5px;
+    }
+
+    .tool-btn {
+        width: 38px;
+        height: 38px;
+        font-size: 14px;
+    }
+
+    .logo {
+        font-size: 18px;
+    }
+
+    .logo i {
+        font-size: 24px;
+    }
+
+    .panel-tab {
+        padding: 12px;
+    }
+
+    .properties-panel {
+        width: var(--panel-width);
+    }
+
+    .status-bar {
+        font-size: 12px;
+        height: 36px;
+    }
+
+    .coordinates {
+        font-size: 12px;
+        padding: 8px 12px;
+        bottom: 15px;
+        left: 15px;
+    }
+}
+
+
+
+/* Для маленьких экранов (ширина < 1200px) */
+
+@media (max-width: 1200px) {
+    :root {
+        --toolbar-height: 48px;
+        --panel-width: 250px;
+    }
+
+    .toolbar-container {
+        gap: 5px;
+    }
+
+    .tool-section {
+        padding: 0 3px;
+    }
+
+    .tool-btn {
+        width: 30px;
+        height: 30px;
+    }
+
+
+
+    .logo span {
+        font-size: 16px;
+    }
+
+    .logo i {
+        font-size: 20px;
+    }
+
+    #projectName {
+        font-size: 13px;
+        max-width: 150px;
+    }
+
+
+
+    .properties-panel {
+        width: var(--panel-width);
+    }
+
+    .panel-tab {
+        padding: 10px;
+        font-size: 13px;
+    }
+
+    .compact-view-controls {
+        top: 15px;
+        left: 15px;
+    }
+
+    .view-btn-compact {
+        width: 28px;
+        height: 28px;
+        font-size: 12px;
+    }
+
+
+}
+/* Для очень маленьких экранов (ширина < 1400px) */
+@media (max-width: 992px) {
+    :root {
+        --toolbar-height: 50px;
+        --panel-width: 280px;
+    }
+
+    .logo span {
+        font-size: 18px;
+    }
+
+    .logo i {
+        font-size: 22px;
+    }
+
+    .tool-btn {
+        width: 36px;
+        height: 36px;
+        font-size: 14px;
+    }
+
+    .divider {
+        height: 24px;
+        margin: 0 10px;
+    }
+
+    .properties-panel {
+        width: var(--panel-width);
+    }
+
+    .panel-content {
+        padding: 15px;
+    }
+
+    .library-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .modal-content {
+        max-width: 450px;
+    }
+
+    .logo span {
+        display: none;
+    }
+
+
+
+
+
+    .sketch-modal {
+        width: 98%;
+        max-width: 98%;
+    }
+
+    .compact-view-controls {
+        display: none;
+    }
+
+    :root {
+        --toolbar-height: 50px;
+        --panel-width: 150px;
+        --border-radius: 5px;
+    }
+
+    .status {
+        font-size: 12px;
+        padding: 4px 10px;
+        min-width: 60px;
+        opacity: 0.5;
+        right: 10px;
+    }
+
+    #projectName {
+        position: absolute;
+        left: 10px;
+        top: 65px;
+    }
+
+
+
+    .logo {
+        padding:0;
+    }
+
+    .tool-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 10px;
+    }
+
+    .tool-btn .cad-icon, .tool-btn .fas {
+        width: 20px;
+        height: 20px;
+        font-size: 16px;
+    }
+    .toolbar-container {
+        gap: 0;
+        padding-left: 0;
+        flex-wrap: nowrap;
+    }
+
+    .project-info {
+
+      border-left: 1px solid var(--border-primary);
+      }
+
+    .tool-section, divider {
+        padding: 0;
+    }
+    .project-info {
+        padding:0;
+    }
+
+    #settings.hidden {
+        display: none;
+    }
+
+    #accountAvatar.hidden {
+        display: none;
+    }
+
+    .controls-hint {
+        display:none;
+    }
+
+    .scene-item .scene-item-name,.scene-item .fas {
+        font-size: 12px;
+    }
+
+    /* Когда панель открыта, кнопка смещается влево на её ширину */
+    .properties-panel:not(.hidden) + .panel-toggle-btn {
+        right: var(--panel-width);
+    }
+
+    .panel-content
+    {
+      padding: 6px;
+    }
+
+    .library-grid
+    {
+        scrollbar-width: none;
+        gap: 5px;
+        padding: 0;
+        margin: 0;
+    }
+    .library-info, .status-left
+    {
+        display:none;
+    }
+
+    .status-bar {
+        flex-direction: column;
+        height: auto;
+        display: none;
+    }
+    .coordinates
+    {
+        display: none;
+    }
+
+    .status-left, .status-right {
+        justify-content: center;
+        text-align: center;
+        flex-wrap: wrap;
+    }
+
+    .separator {
+        display: none;
+    }
+}
+
+
+
+
+/* Уменьшение шрифтов для лучшего восприятия при масштабировании */
+@media screen and (min-resolution: 120dpi) {
+    body {
+        font-size: 14px;
+    }
+
+    h3, h4 {
+        font-size: 1.1em;
+    }
+
+    .panel-tab {
+        font-size: 13px;
+    }
+
+    .property-row label {
+        font-size: 13px;
+    }
+}
+
+/* Отключение анимаций для пользователей с предпочтением reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+    .tool-btn, .sketch-tool-btn, .view-btn-compact {
+        transition: none;
+    }
+
+    .properties-panel {
+        transition: none;
+    }
+}
+
+/* ============================================================
+   МОБИЛЬНАЯ ВЕРСИЯ (≤ 768px)
+   ============================================================ */
+@media (max-width: 768px) {
+
+    /* ---------- 0. Высоты (dvh + fallback) ---------- */
+    html, body {
+        height: 100vh;
+        height: 100dvh;
+        overflow: hidden;
+    }
+
+    :root {
+        --mobile-nav-h: 52px;      /* высота верхнего бара */
+        --mobile-status-h: 26px;   /* высота нижнего статус-бара */
+        --mobile-tools-w: 52px;    /* ширина вертикального меню */
+    }
+
+    /* ---------- 1. Верхний бар: только логотип + project-info ---------- */
+    .navbar {
+        padding: 6px 8px !important;
+        min-height: var(--mobile-nav-h);
+        flex-wrap: nowrap;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .navbar > a { flex-shrink: 0; }
+    .project-info { margin-left: auto; }
+
+     #settings.hidden {
+        display: flex;
+    }
+
+    #accountAvatar.hidden {
+        display: flex;
+    }
+
+  .logo span {
+    display: flex;
+  }
+
+    /* ---------- 2. Главное меню (toolbar) → вертикальная панель справа ---------- */
+    .toolbar-container {
+        position: fixed;
+        top: var(--mobile-nav-h);
+        right: 0;
+        bottom: var(--mobile-status-h);
+        left: auto !important;
+        width: var(--mobile-tools-w);
+        max-height: calc(100dvh
+            - var(--mobile-nav-h)
+            - var(--mobile-status-h));
+        padding: 4px 2px;
+        flex-direction: column !important;
+        align-items: stretch;
+        overflow-x: hidden;
+        overflow-y: auto;
+        background: var(--bg-secondary);
+        border-left: 1px solid var(--border-primary);
+        z-index: 100;
+        scrollbar-width: thin;
+    }
+    .toolbar-container::-webkit-scrollbar { width: 3px; height: 0; }
+
+    /* Все секции и группы — столбцом */
+    .toolbar-container .tool-section,
+    .toolbar-container .tool-group,
+    .toolbar-container #workToolsSection,
+    .toolbar-container #sketchToolsSection {
+        flex-direction: column !important;
+        align-items: stretch;
+        width: 100%;
+        gap: 4px;
+        padding: 0;
+    }
+
+    /* Разделители становятся горизонтальными */
+    .toolbar-container .divider {
+        width: 24px;
+        height: 1px;
+        margin: 4px auto;
+    }
+
+    /* Компактные кнопки */
+    .toolbar-container .tool-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 15px;
+    }
+    .toolbar-container .sketch-tool-menu { width: 100%; }
+    .toolbar-container .sketch-tool-menu .tool-btn { width: 28px; }
+    .toolbar-container .sketch-tool-menu .dropdown-toggle { width: 12px; }
+
+    /* Выпадающие меню открываем влево от панели, не давая им уехать за экран */
+    .toolbar-container .dropdown-menu {
+        left: auto !important;
+        right: calc(var(--mobile-tools-w) + 4px) !important;
+    }
+
+    /* ---------- 3. Вьюпорт + панели учитывают ширину меню ---------- */
+    .main-container {
+        padding-right: var(--mobile-tools-w);
+    }
+
+    /* Нижняя панель свойств (dvh — фикс адресной строки) */
+    .properties-panel {
+        top: auto !important;
+        left: 0 !important;
+        right: var(--mobile-tools-w) !important;
+        bottom: 0 !important;
+        width: auto !important;
+        height: 42vh;
+        height: 42dvh;
+        max-height: 55dvh;
+        border-left: none !important;
+        border-top: 1px solid var(--border-primary);
+        border-radius: var(--border-radius-max) var(--border-radius-max) 0 0;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        z-index: 20;
+        transition: bottom 0.28s ease;
+    }
+    .properties-panel.hidden {
+        bottom: -42vh !important;
+        bottom: -42dvh !important;
+    }
+    .properties-panel .panel-tabs { flex-shrink: 0; }
+    .properties-panel .panel-content {
+        flex: 1 1 auto; min-height: 0; height: auto;
+        overflow-y: auto; padding: 0 6px;
+    }
+    .properties-panel .scene-list,
+    .properties-panel .history-list { max-height: none; }
+
+    .panel-tab { padding: 8px 4px; font-size: 12px; }
+
+    /* ---------- 4. Кнопка-«язычок» — по центру видимой области ---------- */
+    .right-panel-elements {
+        left: 0 !important;
+        right: 0 !important;
+        width: 100% !important;
+    }
+    .properties-panel:not(.hidden) + .right-panel-elements {
+        left: 0 !important;
+        right: 0 !important;
+    }
+
+    .panel-toggle-btn {
+        position: absolute;
+        top: auto !important;
+        bottom: 0;
+        right: auto !important;
+        left: calc((100% - var(--mobile-tools-w)) / 2) !important;
+        transform: translateX(-50%) !important;
+        width: 64px;
+        height: 26px;
+        border-radius: 10px 10px 0 0;
+        border: 1px solid var(--border-primary);
+        border-bottom: none;
+        z-index: 25;
+        transition: bottom 0.28s ease;
+    }
+    .panel-toggle-btn i {
+        display: inline-block !important;
+        transform: rotate(90deg) !important;
+        transition: transform 0.28s ease;
+    }
+    .properties-panel:not(.hidden) + .right-panel-elements .panel-toggle-btn {
+        bottom: 42vh;
+        bottom: 42dvh;
+
+    }
+    .properties-panel:not(.hidden) + .right-panel-elements .panel-toggle-btn i {
+        transform: rotate(90deg) !important;
+    }
+
+    /* Status сообщений не должен прятаться под toolbar */
+    .status {
+        right: calc(var(--mobile-tools-w) + 6px) !important;
+        top: 6px !important;
+    }
+
+    /* ---------- 5. Библиотека: 3 колонки ---------- */
+    .library-grid {
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 5px;
+    }
+
+    /* ---------- 6. Скрываемые оверлеи ---------- */
+    .controls-hint,
+    .coordinates { display: none !important; }
+
+    /* ---------- 7. Компактный статус-бар с плавной обрезкой metrics ---------- */
+    .status-bar {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center;
+        justify-content: space-between;
+        height: auto !important;
+        min-height: var(--mobile-status-h);
+        padding: 2px 8px;
+        font-size: 10px;
+        line-height: 1.2;
+        gap: 6px;
+        flex-shrink: 0;
+    }
+    .status-bar .status-left,
+    .status-bar .status-right {
+        display: flex;
+        align-items: center;
+        flex-wrap: nowrap;
+        gap: 6px;
+        min-width: 0;
+        overflow: hidden;
+        text-align: left;
+    }
+    .status-bar .status-left  { flex: 1 1 auto; justify-content: flex-start; }
+    .status-bar .status-right { flex: 0 0 auto;  margin-left: auto; }
+
+    .status-bar #modeIndicator,
+    .status-bar #selectedInfo,
+    .status-bar #fpsCounter {
+        font-size: 10px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .status-bar #modeIndicator i,
+    .status-bar #fpsCounter i {
+        font-size: 10px;
+        margin-right: 2px;
+    }
+
+    /* metrics: показываем, пока влезают; обрезаем плавно */
+    .status-bar #metrics {
+        display: flex !important;
+        gap: 10px;
+        align-items: center;
+        flex: 1 1 auto;
+        min-width: 0;
+        overflow: hidden;
+        white-space: nowrap;
+        -webkit-mask-image: linear-gradient(90deg, #000 calc(100% - 24px), transparent);
+                mask-image: linear-gradient(90deg, #000 calc(100% - 24px), transparent);
+    }
+
+    /* Скрываем «лишнее» в статус-баре */
+    .status-bar .separator,
+    .status-bar #version,
+    .status-bar #modeIndicator,
+    .status-bar .status-right > a, .search-box,
+    .status-bar .status-right > span:not(#fpsCounter) {
+        display: none !important;
+    }
+
+    .filter-btn {
+      padding: 2px 8px;
+      font-size: 12px;
+      margin-bottom: 0;
+      scrollbar-width: none;
+    }
+
+    }
+
+}

@@ -1,0 +1,164 @@
+[
+  {
+    "id": "cube",
+    "name": "Куб",
+    "type": "primitive",
+    "category": "basic",
+    "icon": "cube.png",
+    "color": "0x4CAF50",
+    "author": ""
+  },
+  {
+    "id": "sphere",
+    "name": "Сфера",
+    "type": "primitive",
+    "category": "basic",
+    "icon": "sphere.png",
+    "color": "0x2196F3",
+    "author": ""
+  },
+  {
+    "id": "cylinder",
+    "name": "Цилиндр",
+    "type": "primitive",
+    "category": "basic",
+    "icon": "cylinder.png",
+    "color": "0xFF9800",
+    "author": ""
+  },
+  {
+    "id": "hexagon",
+    "name": "Шестиугольник",
+    "type": "primitive",
+    "category": "basic",
+    "icon": "hexagon.png",
+    "color": "0x0098FF",
+    "author": ""
+  },
+  {
+    "id": "cone",
+    "name": "Конус",
+    "type": "primitive",
+    "category": "basic",
+    "icon": "cone.png",
+    "color": "0xE91E63",
+    "author": ""
+  },
+  {
+    "id": "torus",
+    "name": "Тор",
+    "type": "primitive",
+    "category": "basic",
+    "icon": "torus.png",
+    "color": "0x9C27B0",
+    "author": ""
+  },
+  {
+    "id": "plane",
+    "name": "Плоскость",
+    "type": "primitive",
+    "category": "basic",
+    "icon": "plane.png",
+    "color": "0x607D8B",
+    "author": ""
+  },
+  {
+    "id": "pyramid",
+    "name": "Пирамида",
+    "type": "primitive",
+    "category": "shapes",
+    "icon": "pyramid.png",
+    "color": "0x00BCD4",
+    "author": ""
+  },
+  {
+    "id": "tube",
+    "name": "Труба",
+    "type": "primitive",
+    "category": "primitive",
+    "icon": "tube.png",
+    "color": "0xFFDC28",
+    "author": ""
+  },
+  {
+    "id": "frustum",
+    "name": "Усеченный конус",
+    "type": "primitive",
+    "category": "primitive",
+    "icon": "frustum.png",
+    "color": "0x795548",
+    "author": ""
+  },
+  {
+    "id": "wedge",
+    "name": "Клин",
+    "type": "primitive",
+    "category": "primitive",
+    "icon": "wedge.png",
+    "color": "0x7091DD",
+    "author": ""
+  },
+  {
+    "id": "gableRoof",
+    "name": "Крыша",
+    "type": "primitive",
+    "category": "primitive",
+    "icon": "roof.png",
+    "color": "0x7DDB57",
+    "author": ""
+  },
+  {
+    "id": "halfRoundRoof",
+    "name": "Круглая крыша",
+    "type": "primitive",
+    "category": "primitive",
+    "icon": "round_roof.png",
+    "color": "0xFB0000",
+    "author": ""
+  },
+  {
+    "id": "hemisphere",
+    "name": "Полусфера",
+    "type": "primitive",
+    "category": "primitive",
+    "icon": "hemisphere.png",
+    "color": "0x3FF83A",
+    "author": ""
+  },
+  {
+    "id": "stadium",
+    "name": "Стадион",
+    "type": "primitive",
+    "category": "primitive",
+    "icon": "stadium.png",
+    "color": "0xFF5722",
+    "author": ""
+  },
+  {
+    "id": "star",
+    "name": "Звезда",
+    "type": "primitive",
+    "category": "primitive",
+    "icon": "star.png",
+    "color": "0xFFD700",
+    "author": ""
+  },
+  {
+      "id": "heart",
+      "name": "Сердце",
+      "type": "primitive",
+      "category": "primitive",
+      "icon": "heart.png",
+      "color": "0xFF1744",
+      "author": ""
+  },
+  {
+      "id": "polyhedron",
+      "name": "Многогранник",
+      "type": "primitive",
+      "category": "primitive",
+      "icon": "polyhedron.png",
+      "color": "0x5DD2D6",
+      "author": ""
+  }
+]

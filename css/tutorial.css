@@ -1,0 +1,177 @@
+/* ===== ОБЩАЯ ПАНЕЛЬ ОБУЧЕНИЯ ===== */
+.lesson-panel {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 400px;
+    max-height: 70vh;
+    overflow-y: auto;
+    background: var(--bg-primary, #2d2d2d);
+    border-radius: var(--border-radius, 8px);
+    padding: 10px;
+    z-index: 1000;
+    box-shadow: var(--shadow-md);
+    margin: 50px 10px;
+
+}
+
+@media (max-width: 992px) {
+    .lesson-panel {
+        margin: 0;
+    }
+}
+.lesson-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+    border-bottom: 1px solid var(--border-primary);
+}
+.lesson-icon { font-size: 20px; }
+.lesson-title { margin: 0; font-size: 16px; flex: 1; color: var(--text-primary, #eee); }
+.lesson-close-btn {
+    background: none; border: none; font-size: 20px; cursor: pointer;
+    color: var(--text-primary, #eee);
+}
+.lesson-tabs {
+    display: flex;
+    gap: 4px;
+    border-bottom: 1px solid var(--border-primary, #444);
+    margin-bottom: 12px;
+}
+.lesson-tab {
+    padding: 6px 12px;
+    background: transparent;
+    border: none;
+    color: var(--text-secondary, #aaa);
+    cursor: pointer;
+    font-size: 13px;
+    border-bottom: 2px solid transparent;
+}
+.lesson-tab.active {
+    color: var(--text-primary, #eee);
+    border-bottom-color: #4CAF50;
+}
+.lesson-pane {
+    display: block; /* всегда видима, содержимое обновляется динамически */
+}
+
+.lesson-step-icon { font-size: 20px; margin-bottom: 4px; }
+.lesson-step-title { font-size: 16px; font-weight: bold; margin-bottom: 6px; color: var(--text-primary, #eee); }
+.lesson-step-description { font-size: 14px; line-height: 1.6; color: var(--text-primary, #eee); }
+.lesson-hint {
+    margin-top: 8px;
+    padding: 8px;
+    border-radius: 4px;
+    font-size: 13px;
+}
+.lesson-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 12px;
+}
+.lesson-progress { font-size: 13px; color: var(--text-secondary, #aaa); }
+.lesson-footer { margin-top: 8px; text-align: right; }
+.lesson-edit-btn {
+    cursor: pointer;
+    color: #4CAF50;
+    font-size: 13px;
+}
+.lesson-edit-btn:hover { text-decoration: underline; }
+
+/* ===== ПОДСВЕТКА ИНСТРУМЕНТА ===== */
+[data-tool].tutorial-active {
+    outline: 2px solid #4CAF50 !important;
+    outline-offset: -2px;
+    border-radius: var(--border-radius, 4px);
+    box-shadow: 0 0 0 4px rgba(76, 175, 80, 0.2);
+}
+.dropdown .dropdown-toggle.tutorial-active {
+    outline: 2px solid #4CAF50 !important;
+    outline-offset: -2px;
+    box-shadow: 0 0 0 4px rgba(76, 175, 80, 0.2);
+}
+.dropdown-menu a[data-tool].tutorial-active {
+    background-color: rgba(76, 175, 80, 0.15) !important;
+    border-left: 3px solid #4CAF50 !important;
+}
+
+.lesson-mode-toggle {
+    font-size: 13px;
+}
+.lesson-mode-toggle label {
+    display: flex;
+    gap: 6px;
+    cursor: pointer;
+}
+
+
+/* ===== ВСТУПЛЕНИЕ ===== */
+.tutorial-intro-grid {
+  display: flex;
+  gap: 16px;
+  margin: 16px 0;
+  flex-wrap: wrap;
+}
+
+.tutorial-intro-card {
+  flex: 1;
+  min-width: 180px;
+  border-radius: var(--border-radius);
+  transition: background 0.2s;
+  text-align: center;
+  overflow: hidden;
+}
+
+.tutorial-intro-card.view {
+  background: rgba(33, 150, 243, 0.1);
+}
+
+.tutorial-intro-card.practice {
+  background: rgba(255, 152, 0, 0.1);
+}
+
+.tutorial-intro-image {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 8px;
+}
+
+.tutorial-intro-image img {
+  object-fit: cover;
+  max-height: 220px;
+  width: 100%;
+}
+
+.tutorial-intro-icon {
+  font-size: 32px;
+  display: none; /* по умолчанию скрыта, показывается если картинка не загружена */
+}
+
+.tutorial-intro-card.view .tutorial-intro-icon {
+  color: #2196f3;
+}
+
+.tutorial-intro-card.practice .tutorial-intro-icon {
+  color: #ff9800;
+}
+
+.tutorial-intro-title {
+  margin: 4px 0;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.tutorial-intro-desc {
+  color: var(--text-secondary, #aaa);
+  margin: 10px;
+}
+
+.tutorial-intro-checkbox {
+  margin-top: 12px;
+  text-align: left;
+}

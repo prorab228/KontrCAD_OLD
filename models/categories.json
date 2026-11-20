@@ -1,0 +1,38 @@
+[
+  {
+    "id": "all",
+    "name": "Все",
+    "children": [
+      "primitive",
+      "components",
+      "community",
+      "KontrBugTech",
+      "user"
+    ]
+  },
+  {
+    "id": "primitive",
+    "name": "Примитивы",
+    "path": "models/primitive"
+  },
+  {
+    "id": "components",
+    "name": "Электронные компоненты",
+    "path": "models/components"
+  },
+  {
+    "id": "community",
+    "name": "Сообщество",
+    "path": "models/community"
+  },
+  {
+    "id": "KontrBugTech",
+    "name": "КонтрБагТех",
+    "path": "models/kontrbugtech"
+  },
+  {
+    "id": "user",
+    "name": "Пользовательские",
+    "path": "models/user"
+  }
+]
